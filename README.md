@@ -1,0 +1,2 @@
+# INGSOC-WARE-OS
+I'm developing this Operating System based on the George Orwell's book 1984, where theres a party called INGSOC, and im imagining how would it be if the party created their own Personal computers (that cmd old style)... Idk how to "attach" pieces of code (like different .py  docs(just like a 'php' but for python(lmk if you know how to do that btw))) to a main one, and thats why its all just one file
