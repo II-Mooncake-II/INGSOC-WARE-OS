@@ -31,7 +31,7 @@ CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
 def start():
-    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ" "Actions: " + CBBLUE + "[sign up]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ MENU | " "Actions: " + CBBLUE + "[sign up]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
 
     if action == "sign up":
         signUp.signUp()
@@ -43,6 +43,6 @@ def start():
         print(CRED + "ERR_00: No such action" + CEND)
         time.sleep(2)
         clear.clear()
-        start.start()
+        start()
     pass
     pass

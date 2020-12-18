@@ -31,7 +31,7 @@ CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
 def start_L():
-    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ" "Actions: " + CBBLUE + "[programs]" + CEND + " | " + CBBLUE + "[files]" + CEND + " | " + CBBLUE + "[preferences]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ MENU | " "Actions: " + CBBLUE + "[programs]" + CEND + " | " + CBBLUE + "[files]" + CEND + " | " + CBBLUE + "[preferences]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
     if  action == "files":
         clear.clear()
         print("Loading data..")
@@ -54,7 +54,7 @@ def start_L():
         print(CRED + "ERR_00: No such action" + CEND)
         time.sleep(2)
         clear.clear()
-        start_L.start_L()
+        start_L()
         pass
 
     pass

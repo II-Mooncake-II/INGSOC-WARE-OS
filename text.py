@@ -14,7 +14,6 @@ import start_L
 import start_R
 import start
 import SYSTEM_FILES
-
 CEND = '\033[0m'
 CRED = '\033[91m'
 CBLUE = '\033[94m'
@@ -30,27 +29,34 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-def programs():
-    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ PROGRAMS | " "Actions: "+ CBWHITE + "[files]" + CEND + " | " + CBWHITE + "[books]" + CEND + " | " + CBWHITE + "[text editor]" + CEND + " | " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " | " + CGREEN + "Type the name of the program you want to open.. " + CEND)
+
+def textE():
+
+    def new():
+        filename = input("filename: ")
+        with open(filename, "w") as f:
+            f.write(input())
+        pass
+    pass
+
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ TEXT EDITOR | " "Actions: " + CBWHITE + "[new file]" + CEND + " | " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
 
     if action == "back":
         clear.clear()
-        start_L.start_L()
+        programs.programs()
     elif action == "log out":
-        clear.clear()
         login_usr.login_usr()
     elif action == "power off":
         boot.boot()
-    elif action == "files":
-        clear.clear()
-        SYSTEM_FILES.SYSTEM_FILES()
-    elif action == "text editor":
-        clear.clear()
-        text.textE()
+    elif action == "new file":
+        print(CLAVENDER + "TYPE YOUR TEXT AND CLICK [ENTER] ONCE YOU FINISHED. THE FILE AUTOSAVES." + CEND)
+        new()
     else:
         print(CRED + "ERR_00: No such action" + CEND)
         time.sleep(2)
         clear.clear()
-        programs()
-        pass
+        textE()
     pass
+    clear.clear()
+    textE()
+pass

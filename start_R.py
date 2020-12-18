@@ -31,13 +31,13 @@ CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
 def start_R():
-    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ" "Actions: " + CBBLUE + "[sign up]" + CEND + " | " + CBBLUE + "[login]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ MENU | " "Actions: " + CBBLUE + "[sign up]" + CEND + " | " + CBBLUE + "[login]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
 
     if action == "sign up":
         print(CRED + "User Already signed!" + CEND)
         time.sleep(2)
         clear.clear()
-        start_R.start_R()
+        start_R()
     elif action == "login":
         clear.clear()
         login_usr.login_usr()
@@ -45,5 +45,5 @@ def start_R():
         print(CRED + "ERR_00: No such action" + CEND)
         time.sleep(2)
         clear.clear()
-        start_R.start_R()
+        start_R()
         pass

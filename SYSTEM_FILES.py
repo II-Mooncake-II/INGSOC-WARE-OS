@@ -31,6 +31,7 @@ CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
 def  SYSTEM_FILES():
+        print(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ FILES | " "Actions: " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " | " + CGREEN + "Type the name of the folder you want to open.. " + CEND)
         print(" ")
         print(CYELLOW + " █████       █████       █████       █████      " + CEND)
         print(CYELLOW + " █████       █████       █████       █████      " + CEND)
@@ -40,11 +41,13 @@ def  SYSTEM_FILES():
         print(CYELLOW + " █████       █████       █████       █████      " + CEND)
         print(CYELLOW + " images⮠     other⮠     ./BBs⮠       usr⮠      " + CEND)
         print(" ")
-        action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ" "Actions: " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " | " + CGREEN + "Type the name of the folder you want to open.. " + CEND)
+
+        action = input(" ")
+
 
         if action == "back":
             clear.clear()
-            start_L.start_L()
+            programs.programs()
         elif action == "log out":
             clear.clear()
             login_usr.login_usr()
