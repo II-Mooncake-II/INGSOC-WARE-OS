@@ -30,4 +30,14 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-boot.boot()
+def signUp():
+    global name
+    global password
+
+    name = input("Choose a Username: " + CBWHITE)
+    password = input(CEND + "Choose a Password: " + CHID)
+    print(CEND + "User registered!..")
+    time.sleep(2)
+    clear.clear()
+    start_R.start_R()
+    pass

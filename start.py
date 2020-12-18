@@ -30,4 +30,19 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-boot.boot()
+def start():
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ" "Actions: " + CBBLUE + "[sign up]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
+
+    if action == "sign up":
+        signUp.signUp()
+#    elif action == "login":
+#        login_check()
+    elif action == "power off":
+        boot.boot()
+    else:
+        print(CRED + "ERR_00: No such action" + CEND)
+        time.sleep(2)
+        clear.clear()
+        start.start()
+    pass
+    pass

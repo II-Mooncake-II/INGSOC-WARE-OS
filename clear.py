@@ -30,4 +30,10 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-boot.boot()
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+        logo.logo()
+        pass

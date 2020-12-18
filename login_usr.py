@@ -30,4 +30,14 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-boot.boot()
+def login_usr():
+    usr = input("Username: " + CBWHITE)
+    if usr != signUp.name:
+        print(CEND + "User not registered")
+        time.sleep(2)
+        clear.clear()
+        login_usr()
+    else:
+        login_ps.login_ps()
+        pass
+        pass

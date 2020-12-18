@@ -30,4 +30,16 @@ CBYELLOW = '\033[43m'
 CBLAVENDER = '\033[45m'
 CBWHITE = '\033[7m'
 
-boot.boot()
+def login_ps():
+    ps = input(CEND + "Password: " + CHID)
+    if ps != signUp.password:
+        print(CEND + "Wrong password, try again please..")
+        clear.clear()
+        login_usr.login_usr()
+    else:
+        clear.clear()
+        print(CEND + "Loading data..")
+        time.sleep(2)
+        start_L.start_L()
+        pass
+        pass
