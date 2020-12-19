@@ -13,7 +13,9 @@ import signUp
 import start_L
 import start_R
 import start
+import text
 import SYSTEM_FILES
+
 CEND = '\033[0m'
 CRED = '\033[91m'
 CBLUE = '\033[94m'
@@ -31,6 +33,7 @@ CBWHITE = '\033[7m'
 
 
 def textE():
+    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ TEXT EDITOR | " "Actions: " + CBWHITE + "[new file]" + CEND + " | " + CBWHITE + "[open file]" + CEND + " | " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
 
     def new():
         filename = input("filename: ")
@@ -38,8 +41,6 @@ def textE():
             f.write(input())
         pass
     pass
-
-    action = input(CRED + "ᵒ" + CYELLOW + "ᵒ" + CEND + "ᵒ TEXT EDITOR | " "Actions: " + CBWHITE + "[new file]" + CEND + " | " + CBBLUE + "[back]" + CEND + " | " + CBBLUE + "[log out]" + CEND + " | " + CBBLUE + "[power off]" + CEND + " ")
 
     if action == "back":
         clear.clear()
@@ -51,6 +52,14 @@ def textE():
     elif action == "new file":
         print(CLAVENDER + "TYPE YOUR TEXT AND CLICK [ENTER] ONCE YOU FINISHED. THE FILE AUTOSAVES." + CEND)
         new()
+    elif action == "open file":
+        f = open(input("filename: "), "r")
+        print(f.read())
+        back = input(CGREEN + "'back' to close the file.. " + CEND)
+        if back == "back":
+            clear.clear()
+            textE()
+        pass
     else:
         print(CRED + "ERR_00: No such action" + CEND)
         time.sleep(2)

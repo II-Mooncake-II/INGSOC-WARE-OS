@@ -36,4 +36,5 @@ def clear():
     else:
         _ = system('clear')
         logo.logo()
-        pass
+    pass
+pass

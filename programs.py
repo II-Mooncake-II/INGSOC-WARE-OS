@@ -14,6 +14,7 @@ import start_L
 import start_R
 import start
 import SYSTEM_FILES
+import text
 
 CEND = '\033[0m'
 CRED = '\033[91m'
